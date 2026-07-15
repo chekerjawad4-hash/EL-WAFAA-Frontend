@@ -10,7 +10,7 @@ function TradeHeader({ pair, onOpen }){
     async function loadMarket(){
 
       const res = await fetch(
-        "http://127.0.0.1:3001/api/markets"
+        "https://el-wafaa-backend.onrender.com/api/markets"
       );
 
       const data = await res.json();

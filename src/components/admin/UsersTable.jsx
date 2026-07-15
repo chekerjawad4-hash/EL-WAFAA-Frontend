@@ -10,7 +10,7 @@ useEffect(()=>{
 
 const token=localStorage.getItem("token");
 
-fetch("http://127.0.0.1:3001/api/admin/users",{
+fetch("https://el-wafaa-backend.onrender.com/api/admin/users",{
 headers:{
 Authorization:`Bearer ${token}`
 }

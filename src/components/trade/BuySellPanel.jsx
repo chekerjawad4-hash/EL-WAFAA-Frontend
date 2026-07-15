@@ -14,7 +14,7 @@ const [stopLoss,setStopLoss]=useState("");
 
 const openPosition = async () => {
 try {
-await fetch("http://127.0.0.1:3001/api/futures/open",{
+await fetch("https://el-wafaa-backend.onrender.com/api/futures/open",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({

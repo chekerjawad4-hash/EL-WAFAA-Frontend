@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:3001/api";
+const API = "https://el-wafaa-backend.onrender.com/api";
 
 export async function getWallet(userId){
     const res = await fetch(`${API}/wallet/${userId}`);

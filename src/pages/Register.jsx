@@ -14,6 +14,8 @@ const navigate=useNavigate();
 
 async function handleRegister(){
 
+try{
+
 const result = await register(
 username,
 email,
@@ -31,6 +33,12 @@ navigate("/login");
 }else{
 
 setMessage("خطأ: "+JSON.stringify(result));
+
+}
+
+}catch(e){
+
+setMessage("خطأ اتصال: "+e.message);
 
 }
 

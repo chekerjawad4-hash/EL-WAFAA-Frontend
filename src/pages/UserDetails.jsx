@@ -12,7 +12,7 @@ const loadUser=()=>{
 
 const token=localStorage.getItem("token");
 
-fetch(`http://127.0.0.1:3001/api/admin/user/${id}`,{
+fetch(`https://el-wafaa-backend.onrender.com/api/admin/user/${id}`,{
 headers:{
 Authorization:`Bearer ${token}`
 }
@@ -40,7 +40,7 @@ if(!amount)return;
 const token=localStorage.getItem("token");
 
 const res=await fetch(
-`http://127.0.0.1:3001/api/admin/user/${id}/balance`,
+`https://el-wafaa-backend.onrender.com/api/admin/user/${id}/balance`,
 {
 method:"POST",
 headers:{

@@ -19,7 +19,7 @@ const [search,setSearch]=useState("");
 
 useEffect(()=>{
 
-fetch("http://127.0.0.1:3001/api/markets")
+fetch("https://el-wafaa-backend.onrender.com/api/markets")
 .then(res=>res.json())
 .then(data=>{
 setMarkets(data.markets.map(m=>m.symbol));

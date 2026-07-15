@@ -6,7 +6,7 @@ export default function OpenPositions(){
 const [positions,setPositions]=useState([]);
 
 const loadPositions=()=>{
-fetch("http://127.0.0.1:3001/api/futures/positions")
+fetch("https://el-wafaa-backend.onrender.com/api/futures/positions")
 .then(res=>res.json())
 .then(data=>setPositions(data))
 .catch(console.error);

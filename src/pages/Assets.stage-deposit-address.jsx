@@ -9,7 +9,7 @@ function Assets(){
   const [deposits,setDeposits]=useState([]);
 
   async function loadWallet(){
-    const res=await fetch("http://127.0.0.1:3001/api/wallet/1");
+    const res=await fetch("https://el-wafaa-backend.onrender.com/api/wallet/1");
     const data=await res.json();
 
     if(data.success){
@@ -18,7 +18,7 @@ function Assets(){
   }
 
   async function loadDeposits(){
-    const res=await fetch("http://127.0.0.1:3001/api/deposits");
+    const res=await fetch("https://el-wafaa-backend.onrender.com/api/deposits");
     const data=await res.json();
 
     if(data.success){

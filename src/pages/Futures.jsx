@@ -15,7 +15,7 @@ function Futures(){
     async function loadPositions(){
 
         const res = await fetch(
-            "http://127.0.0.1:3001/api/futures/positions",
+            "https://el-wafaa-backend.onrender.com/api/futures/positions",
             {
                 headers:{
                     Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -34,7 +34,7 @@ function Futures(){
     async function closeTrade(id){
 
         const res = await fetch(
-            "http://127.0.0.1:3001/api/futures/close",
+            "https://el-wafaa-backend.onrender.com/api/futures/close",
             {
                 method:"POST",
                 headers:{
@@ -61,7 +61,7 @@ function Futures(){
     async function openTrade(side){
 
         const response = await fetch(
-            "http://127.0.0.1:3001/api/futures/open",
+            "https://el-wafaa-backend.onrender.com/api/futures/open",
             {
                 method:"POST",
                 headers:{

@@ -14,7 +14,7 @@ server:"..."
 
 useEffect(()=>{
 
-fetch("http://127.0.0.1:3001/api/admin/dashboard")
+fetch("https://el-wafaa-backend.onrender.com/api/admin/dashboard")
 .then(res=>res.json())
 .then(data=>setStats(data))
 .catch(console.error);

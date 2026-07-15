@@ -30,12 +30,12 @@ const [marketOpen,setMarketOpen]=useState(false);
 const filteredMarkets=markets.filter(m=>m.toLowerCase().includes(search.toLowerCase()));
 
 useEffect(()=>{
-fetch("http://127.0.0.1:3001/api/markets")
+fetch("https://el-wafaa-backend.onrender.com/api/markets")
 .then(res=>res.json())
 .then(data=>{
 console.log(data.markets.slice(0,5));
 setMarkets(data.markets.filter(m=>m.quoteAsset==="USDT").map(m=>m.symbol));
-fetch("http://127.0.0.1:3001/api/prices")
+fetch("https://el-wafaa-backend.onrender.com/api/prices")
 .then(res=>res.json())
 .then(data=>setPrices(data));
 })

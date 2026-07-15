@@ -23,7 +23,7 @@ function Assets(){
 
   async function loadWallet(){
     const res=await fetch(
-      "http://127.0.0.1:3001/api/wallet",
+      "https://el-wafaa-backend.onrender.com/api/wallet",
       {
         headers:{
           Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -39,7 +39,7 @@ function Assets(){
 
   async function loadDeposits(){
     const res=await fetch(
-      "http://127.0.0.1:3001/api/deposits",
+      "https://el-wafaa-backend.onrender.com/api/deposits",
       {
         headers:{
           Authorization:`Bearer ${localStorage.getItem("token")}`
