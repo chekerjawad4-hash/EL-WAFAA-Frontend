@@ -1,0 +1,37 @@
+.order-book{
+background:#111827;
+border-radius:12px;
+padding:12px;
+color:#fff;
+}
+
+.book-header,
+.ask-row,
+.bid-row{
+display:flex;
+justify-content:space-between;
+padding:5px 0;
+font-size:13px;
+}
+
+.book-header{
+color:#888;
+border-bottom:1px solid #222;
+margin-bottom:8px;
+}
+
+.ask-row span:first-child{
+color:#f6465d;
+}
+
+.bid-row span:first-child{
+color:#0ecb81;
+}
+
+.mark-price{
+text-align:center;
+font-size:20px;
+font-weight:bold;
+padding:10px 0;
+color:#fff;
+}

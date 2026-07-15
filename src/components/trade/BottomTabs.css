@@ -1,0 +1,31 @@
+.bottom-tabs{
+background:#11161c;
+border:1px solid #202630;
+border-radius:8px;
+margin-top:10px;
+}
+
+.tabs{
+display:flex;
+border-bottom:1px solid #202630;
+}
+
+.tabs button{
+flex:1;
+padding:12px;
+background:none;
+color:#9aa4af;
+border:0;
+cursor:pointer;
+}
+
+.tabs .active{
+color:#f0b90b;
+border-bottom:2px solid #f0b90b;
+}
+
+.tab-content{
+padding:15px;
+min-height:120px;
+color:#cfd6dd;
+}

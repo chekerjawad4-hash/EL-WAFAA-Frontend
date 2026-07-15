@@ -1,0 +1,14 @@
+.pair-selector{
+    margin-bottom:16px;
+}
+
+.pair-selector select{
+    width:100%;
+    background:#171b22;
+    color:#fff;
+    border:1px solid #2d3440;
+    border-radius:12px;
+    padding:14px;
+    font-size:18px;
+    outline:none;
+}

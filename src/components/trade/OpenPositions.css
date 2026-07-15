@@ -1,0 +1,28 @@
+.open-positions{
+background:#111827;
+color:#fff;
+padding:16px;
+border-radius:12px;
+margin-top:12px;
+}
+
+.open-positions h3{
+margin:0 0 10px;
+font-size:16px;
+}
+
+.open-positions p{
+color:#9ca3af;
+margin:0;
+}
+
+.position-row{
+padding:12px;
+border-bottom:1px solid #2a2a2a;
+color:#fff;
+}
+
+.position-row strong{
+color:#fff;
+}
+

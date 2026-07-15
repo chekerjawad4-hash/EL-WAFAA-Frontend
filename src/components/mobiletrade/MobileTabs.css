@@ -1,0 +1,24 @@
+.mobile-tabs{
+background:#11161c;
+border-bottom:1px solid #202630;
+}
+
+.tabs-header{
+display:flex;
+}
+
+.tabs-header button{
+flex:1;
+padding:14px;
+background:none;
+border:0;
+color:#8d97a3;
+font-size:15px;
+cursor:pointer;
+}
+
+.tabs-header .active{
+color:#f0b90b;
+border-bottom:2px solid #f0b90b;
+font-weight:bold;
+}

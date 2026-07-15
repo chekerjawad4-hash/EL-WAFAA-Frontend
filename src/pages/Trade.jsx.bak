@@ -1,0 +1,13 @@
+import "../styles/Trade.css";
+function Trade(){
+
+    return(
+        <div style={{color:"white",padding:"20px"}}>
+            <h1>📈 تداول</h1>
+            <p>شراء وبيع العملات</p>
+        </div>
+    );
+
+}
+
+export default Trade;

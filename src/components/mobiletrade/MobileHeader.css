@@ -1,0 +1,47 @@
+.mobile-header{
+background:#0b0e11;
+padding:16px;
+border-bottom:1px solid #202630;
+}
+
+.pair{
+font-size:20px;
+font-weight:bold;
+color:#fff;
+margin-bottom:8px;
+}
+
+.price{
+font-size:30px;
+font-weight:bold;
+color:#0ecb81;
+}
+
+.change{
+color:#0ecb81;
+margin-top:4px;
+font-size:16px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:16px;
+}
+
+.stats div{
+display:flex;
+flex-direction:column;
+}
+
+.stats span{
+font-size:12px;
+color:#8d97a3;
+}
+
+.stats strong{
+margin-top:4px;
+font-size:14px;
+color:#fff;
+}

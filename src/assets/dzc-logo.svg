@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="100" fill="#0B0F14"/>
+
+  <path d="M120 110
+           H250
+           C340 110 390 170 390 256
+           C390 342 340 402 250 402
+           H120
+           Z"
+        fill="#E11D2E"/>
+
+  <path d="M165 165
+           H245
+           C295 165 330 200 330 256
+           C330 312 295 347 245 347
+           H165
+           Z"
+        fill="#0B0F14"/>
+
+  <text x="256"
+        y="470"
+        text-anchor="middle"
+        font-size="54"
+        font-family="Arial"
+        font-weight="700"
+        fill="#F5C542">DZC</text>
+</svg>

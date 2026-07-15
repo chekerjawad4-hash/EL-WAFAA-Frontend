@@ -1,0 +1,28 @@
+import "../styles/Header.css";
+
+function Header() {
+  return (
+    <header className="header">
+
+      <button className="icon-btn">
+        ☰
+      </button>
+
+      <div className="logo">
+        <span className="logo-red">W</span>
+        <div>
+          <h2>EL WAFAA</h2>
+          <small>EXCHANGE</small>
+        </div>
+      </div>
+
+      <div className="header-right">
+        <button className="icon-btn">🔔</button>
+        <button className="icon-btn">👤</button>
+      </div>
+
+    </header>
+  );
+}
+
+export default Header;

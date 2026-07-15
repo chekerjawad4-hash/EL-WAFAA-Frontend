@@ -1,0 +1,46 @@
+
+.percent{
+display:flex;
+gap:5px;
+margin:10px 0;
+}
+
+
+.percent button{
+flex:1;
+background:#1e2329;
+color:white;
+border:0;
+padding:8px;
+}
+
+
+.active-buy{
+background:#0ecb81 !important;
+color:black !important;
+}
+
+
+.active-sell{
+background:#f6465d !important;
+color:white !important;
+}
+
+
+.order-sell{
+width:100%;
+background:#f6465d;
+color:white;
+padding:14px;
+border:0;
+}
+
+
+.order-buy{
+width:100%;
+background:#0ecb81;
+color:black;
+padding:14px;
+border:0;
+}
+

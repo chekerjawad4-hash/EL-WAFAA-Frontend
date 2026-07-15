@@ -1,0 +1,29 @@
+.home-menu{
+    display:flex;
+    gap:15px;
+    padding:20px;
+    overflow-x:auto;
+}
+
+.home-menu a{
+    min-width:90px;
+    height:80px;
+    background:#171b22;
+    border:1px solid #292f3a;
+    border-radius:16px;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+}
+
+.home-menu a:first-child{
+    border-color:#e11d2e;
+}
+
+.home-menu span{
+    margin-top:8px;
+}

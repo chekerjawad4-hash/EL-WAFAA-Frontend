@@ -1,0 +1,90 @@
+import { useState } from "react";
+
+import Header from "../components/Header";
+import BalanceCard from "../components/BalanceCard";
+import ActionButtons from "../components/ActionButtons";
+import ChartCard from "../components/ChartCard";
+import TradingPanel from "../components/TradingPanel";
+import MarketCards from "../components/MarketCards";
+import AnnouncementBar from "../components/AnnouncementBar";
+import BottomNav from "../components/BottomNav";
+
+import hero from "../assets/hero.png";
+import "../styles/Hero.css";
+
+function Home() {
+  const [selectedSymbol, setSelectedSymbol] = useState("DZCUSDT");
+
+  return (
+    <div style={{ background: "#0b0f14", minHeight: "100vh", color: "#fff" }}>
+      <Header /> */}
+
+      <AnnouncementBar /> */}
+
+      <section className="hero"
+        style={{
+          height: "420px",
+          backgroundImage: `linear-gradient(rgba(5,5,8,.55), rgba(5,5,8,.80)), url(${hero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          borderBottomLeftRadius: "30px",
+          borderBottomRightRadius: "30px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          padding: "20px",
+        }}
+      >
+        <h1 style={{ fontSize: "36px", fontWeight: "700", marginBottom: "15px" }}>
+          مستقبل التداول يبدأ مع EL WAFAA
+        </h1>
+
+        <p className="hero-text" style={{ color: "#d0d0d0", maxWidth: "500px", marginBottom: "25px" }}>
+          منصة احترافية لتداول العملات الرقمية بسرعة وأمان
+        </p>
+
+        <div style={{ display: "flex", gap: "15px" }}>
+          <button
+            style={{
+              background: "#d81f2a",
+              color: "#fff",
+              border: "none",
+              padding: "14px 26px",
+              borderRadius: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            ابدأ التداول
+          </button>
+
+          <button
+            style={{
+              background: "transparent",
+              color: "#fff",
+              border: "1px solid #d81f2a",
+              padding: "14px 26px",
+              borderRadius: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            شراء DZC
+          </button>
+        </div>
+      </section>
+
+      {/* <BalanceCard /> */}
+      {/* <ActionButtons /> */}
+      {/* <ChartCard
+        symbol={selectedSymbol}
+        onSymbolChange={setSelectedSymbol}
+      /> */}
+      <TradingPanel symbol={selectedSymbol} /> */}
+      <MarketCards onSelect={setSelectedSymbol} /> */}
+      <BottomNav /> */}
+    </div>
+  );
+}
+
+export default Home;

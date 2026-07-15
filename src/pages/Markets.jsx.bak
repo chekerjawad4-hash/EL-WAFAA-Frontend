@@ -1,0 +1,12 @@
+function Markets(){
+
+    return(
+        <div style={{color:"white",padding:"20px"}}>
+            <h1>📊 الأسواق</h1>
+            <p>أسعار العملات والأسواق</p>
+        </div>
+    );
+
+}
+
+export default Markets;

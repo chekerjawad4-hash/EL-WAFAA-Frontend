@@ -1,0 +1,35 @@
+.futures-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 16px;
+background:#111827;
+border-bottom:1px solid #222;
+color:#fff;
+}
+
+.header-left h2{
+margin:0;
+font-size:20px;
+font-weight:700;
+}
+
+.contract{
+font-size:12px;
+color:#f0b90b;
+}
+
+.last-price{
+font-size:22px;
+font-weight:bold;
+}
+
+.up{
+color:#0ecb81;
+font-weight:bold;
+}
+
+.down{
+color:#f6465d;
+font-weight:bold;
+}

@@ -1,0 +1,50 @@
+.pair-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:flex;
+    align-items:flex-end;
+    z-index:9999;
+}
+
+.pair-modal{
+    width:100%;
+    background:#171b22;
+    border-radius:24px 24px 0 0;
+    padding:20px;
+    max-height:80vh;
+    overflow:auto;
+}
+
+.pair-handle{
+    width:60px;
+    height:5px;
+    background:#555;
+    border-radius:20px;
+    margin:0 auto 18px;
+}
+
+.pair-search{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#0f141b;
+    color:white;
+    margin:15px 0;
+}
+
+.pair-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:10px;
+    background:#0f141b;
+    color:white;
+}
+
+.pair-item.active{
+    border:1px solid #e11d2e;
+}

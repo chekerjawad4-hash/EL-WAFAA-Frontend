@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="gold" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#fff8c6"/>
+      <stop offset="35%" stop-color="#ffd54a"/>
+      <stop offset="70%" stop-color="#c99212"/>
+      <stop offset="100%" stop-color="#6d4700"/>
+    </radialGradient>
+
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1a0"/>
+      <stop offset="50%" stop-color="#dca71a"/>
+      <stop offset="100%" stop-color="#8b5b00"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="240" fill="url(#gold)" stroke="url(#ring)" stroke-width="18"/>
+  <circle cx="256" cy="256" r="205" fill="none" stroke="#f8dc72" stroke-width="6" opacity="0.6"/>
+
+  <text x="256" y="240"
+        text-anchor="middle"
+        font-size="170"
+        font-family="Arial"
+        font-weight="900"
+        fill="#8a0000"
+        filter="url(#glow)">D</text>
+
+  <text x="256" y="315"
+        text-anchor="middle"
+        font-size="54"
+        font-family="Arial"
+        font-weight="700"
+        fill="#5b3500">Z C</text>
+
+  <circle cx="256" cy="256" r="228"
+          fill="none"
+          stroke="#fff6b8"
+          stroke-width="2"
+          stroke-dasharray="6 10"
+          opacity="0.7"/>
+</svg>

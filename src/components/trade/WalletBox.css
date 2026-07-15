@@ -1,0 +1,17 @@
+.wallet-box{
+  background:#171b22;
+  color:white;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+.wallet-box h3{
+  margin-bottom:10px;
+}
+
+.wallet-box div{
+  display:flex;
+  justify-content:space-between;
+  padding:8px;
+}

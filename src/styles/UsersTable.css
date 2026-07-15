@@ -1,0 +1,35 @@
+.users-table{
+margin-top:30px;
+overflow:auto;
+}
+
+.users-table table{
+width:100%;
+border-collapse:collapse;
+}
+
+.users-table th,
+.users-table td{
+padding:12px;
+border:1px solid #2b3139;
+text-align:left;
+}
+
+.users-table th{
+background:#161b22;
+color:#f0b90b;
+}
+
+.users-table tr:nth-child(even){
+background:#11161c;
+}
+
+.search-box{
+width:100%;
+padding:10px;
+margin:15px 0;
+background:#161b22;
+color:#fff;
+border:1px solid #2b3139;
+border-radius:6px;
+}

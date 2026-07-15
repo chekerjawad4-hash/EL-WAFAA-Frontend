@@ -1,0 +1,41 @@
+.markets-page{
+    min-height:100vh;
+    background:#0b0f14;
+    color:white;
+    padding:20px;
+}
+
+.markets-page h1{
+    color:#fff;
+}
+
+.search{
+    width:100%;
+    padding:14px;
+    background:#171b22;
+    border:1px solid #333;
+    border-radius:12px;
+    color:white;
+    margin:20px 0;
+}
+
+.market-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#171b22;
+    padding:18px;
+    margin-bottom:12px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+}
+
+.market-card h3{
+    color:#f5c542;
+}
+
+.market-card span{
+    color:#00c853;
+    font-weight:bold;
+}

@@ -1,0 +1,104 @@
+.trade-panel{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.trade-type,
+.trade-side,
+.percent-bar{
+display:flex;
+gap:6px;
+}
+
+.trade-type button,
+.trade-side button,
+.percent-bar button{
+flex:1;
+padding:10px;
+background:#1a2028;
+color:white;
+border:0;
+border-radius:5px;
+cursor:pointer;
+}
+
+.trade-type .active{
+background:#f0b90b;
+color:black;
+font-weight:bold;
+}
+
+.buy-active{
+background:#0ecb81 !important;
+color:black !important;
+}
+
+.sell-active{
+background:#f6465d !important;
+}
+
+.trade-panel input{
+padding:12px;
+background:#0b0e11;
+border:1px solid #2a3441;
+color:white;
+border-radius:5px;
+}
+
+.buy-btn{
+padding:14px;
+background:#0ecb81;
+color:black;
+border:0;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.sell-btn{
+padding:14px;
+background:#f6465d;
+color:white;
+border:0;
+border-radius:5px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.trade-settings{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-bottom:10px;
+}
+
+.trade-settings button{
+flex:1;
+background:#1f2937;
+color:#fff;
+border:1px solid #374151;
+padding:10px;
+border-radius:8px;
+font-weight:bold;
+}
+
+
+.trade-info{
+margin:15px 0;
+font-size:13px;
+color:#b0b0b0;
+}
+
+.trade-info div{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+border-bottom:1px solid #222;
+}
+
+.trade-info span:last-child{
+color:#fff;
+font-weight:bold;
+}
+

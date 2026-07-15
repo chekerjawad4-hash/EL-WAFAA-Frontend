@@ -1,0 +1,102 @@
+import { useState } from "react";
+import { login } from "../services/api";
+
+
+function Login(){
+
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [message,setMessage] = useState("");
+
+
+    async function handleLogin(){
+
+        const result = await login(
+            email,
+            password
+        );
+
+
+        if(result.success){
+
+            localStorage.setItem(
+                "user",
+                JSON.stringify(result.user)
+            );
+
+
+            setMessage("تم تسجيل الدخول ✅ " + JSON.stringify(result.user));
+
+        }else{
+
+            setMessage("خطأ: " + JSON.stringify(result));
+
+        }
+
+    }
+
+
+
+    return (
+
+        <div style={{
+            background:"#111",
+            color:"#fff",
+            minHeight:"100vh",
+            padding:"40px",
+            textAlign:"center"
+        }}>
+
+            <h1>
+                EL WAFAA Exchange
+            </h1>
+
+
+            <h2>
+                تسجيل الدخول
+            </h2>
+
+
+            <input
+                placeholder="البريد الإلكتروني"
+                value={email}
+                onChange={
+                    e=>setEmail(e.target.value)
+                }
+            />
+
+
+            <br/><br/>
+
+
+            <input
+                type="password"
+                placeholder="كلمة المرور"
+                value={password}
+                onChange={
+                    e=>setPassword(e.target.value)
+                }
+            />
+
+
+            <br/><br/>
+
+
+            <button onClick={handleLogin}>
+                دخول
+            </button>
+
+
+            <p>
+                {message}
+            </p>
+
+
+        </div>
+
+    );
+
+}
+
+
+export default Login;

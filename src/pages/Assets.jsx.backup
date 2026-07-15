@@ -1,0 +1,108 @@
+import { useState } from "react";
+
+function Assets(){
+
+  const [currency,setCurrency]=useState("USDT");
+  const [network,setNetwork]=useState("TRC20");
+  const [amount,setAmount]=useState("");
+  const [txid,setTxid]=useState("");
+
+  async function sendDeposit(){
+
+    if(Number(amount) <= 0){
+        alert("أدخل مبلغًا صحيحًا");
+        return;
+    }
+
+    if(txid.trim() === ""){
+        alert("أدخل TXID");
+        return;
+    }
+
+
+    const res=await fetch("http://127.0.0.1:3001/api/deposit",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        userId:1,
+        currency,
+        network,
+        amount:Number(amount),
+        txid,
+        screenshot:"proof.png"
+      })
+    });
+
+    const data=await res.json();
+
+    alert(data.message || "تم إرسال الطلب");
+
+    setAmount("");
+    setTxid("");
+  }
+
+  return(
+
+    <div style={{
+      background:"#0b0f14",
+      minHeight:"100vh",
+      color:"white",
+      padding:"20px"
+    }}>
+
+      <h1>💼 الأصول</h1>
+
+      <h3>إيداع</h3>
+
+      <select
+        value={currency}
+        onChange={e=>setCurrency(e.target.value)}
+      >
+        <option value="USDT">USDT</option>
+        <option value="DZC">DZC</option>
+      </select>
+
+      <br/><br/>
+
+      <select
+        value={network}
+        onChange={e=>setNetwork(e.target.value)}
+      >
+        <option value="TRC20">TRC20</option>
+        <option value="BEP20">BEP20</option>
+        <option value="ERC20">ERC20</option>
+      </select>
+
+      <br/><br/>
+
+      <input
+        type="number"
+        placeholder="Amount"
+        value={amount}
+        onChange={e=>setAmount(e.target.value)}
+      />
+
+      <br/><br/>
+
+      <input
+        type="text"
+        placeholder="TXID"
+        value={txid}
+        onChange={e=>setTxid(e.target.value)}
+      />
+
+      <br/><br/>
+
+      <button onClick={sendDeposit}>
+        إرسال طلب الإيداع
+      </button>
+
+    </div>
+
+  );
+
+}
+
+export default Assets;

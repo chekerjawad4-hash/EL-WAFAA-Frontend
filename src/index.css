@@ -1,0 +1,14 @@
+@import "./styles/Background.css";
+
+*{
+  box-sizing:border-box;
+}
+
+html,body,#root{
+  width:100%;
+  min-height:100%;
+}
+
+body{
+  font-family:Arial, sans-serif;
+}

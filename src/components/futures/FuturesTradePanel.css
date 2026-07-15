@@ -1,0 +1,58 @@
+.trade-panel{
+background:#111827;
+padding:14px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.trade-top,
+.trade-types,
+.percent-row{
+display:flex;
+gap:8px;
+}
+
+.trade-top button,
+.trade-types button,
+.percent-row button{
+flex:1;
+padding:10px;
+background:#1f2937;
+color:#fff;
+border:none;
+border-radius:8px;
+}
+
+.trade-types .active{
+background:#f0b90b;
+color:#000;
+font-weight:bold;
+}
+
+.trade-panel input{
+padding:10px;
+background:#0b1220;
+color:#fff;
+border:1px solid #333;
+border-radius:8px;
+}
+
+.buy-btn{
+padding:12px;
+background:#0ecb81;
+color:#fff;
+border:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.sell-btn{
+padding:12px;
+background:#f6465d;
+color:#fff;
+border:none;
+border-radius:8px;
+font-weight:bold;
+}

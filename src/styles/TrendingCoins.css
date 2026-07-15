@@ -1,0 +1,34 @@
+.trending{
+    padding:20px;
+}
+
+.trending h2{
+    color:#fff;
+}
+
+.coin-list{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.coin-card{
+    min-width:170px;
+    background:#171b22;
+    border:1px solid #292f3a;
+    border-radius:15px;
+    padding:15px;
+}
+
+.coin-card h3{
+    color:#f5c542;
+}
+
+.coin-card p{
+    color:#fff;
+}
+
+.coin-card span{
+    color:#00c853;
+}

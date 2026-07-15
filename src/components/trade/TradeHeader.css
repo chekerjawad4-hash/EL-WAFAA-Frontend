@@ -1,0 +1,55 @@
+.trade-header{
+    background:#171b22;
+    border:1px solid #2d3440;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:18px;
+}
+
+.pair h2{
+    margin:0;
+    font-size:28px;
+    color:#fff;
+}
+
+.change{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.positive{
+    color:#00c853;
+}
+
+.price{
+    margin-top:8px;
+    font-size:34px;
+    font-weight:700;
+    color:#fff;
+}
+
+.market-stats{
+    display:flex;
+    gap:12px;
+    margin-top:22px;
+}
+
+.stat{
+    flex:1;
+    background:#0f141b;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+}
+
+.stat span{
+    display:block;
+    color:#8d97a8;
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+.stat strong{
+    color:#fff;
+}

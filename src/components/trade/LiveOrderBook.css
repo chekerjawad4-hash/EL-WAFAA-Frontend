@@ -1,0 +1,41 @@
+.ob{
+font-size:13px;
+}
+
+.ob-title{
+font-size:16px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.ob-head,
+.row{
+display:flex;
+justify-content:space-between;
+padding:4px 0;
+}
+
+.ob-head{
+color:#888;
+border-bottom:1px solid #222;
+margin-bottom:5px;
+}
+
+.sell span:first-child{
+color:#f6465d;
+}
+
+.buy span:first-child{
+color:#0ecb81;
+}
+
+.last-price{
+text-align:center;
+padding:10px 0;
+font-size:18px;
+font-weight:bold;
+color:#f0b90b;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+margin:8px 0;
+}

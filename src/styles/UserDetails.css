@@ -1,0 +1,53 @@
+.user-details{
+padding:20px;
+color:#fff;
+}
+
+.user-card{
+background:#161b22;
+padding:20px;
+border-radius:10px;
+max-width:500px;
+}
+
+.user-card p{
+margin:10px 0;
+}
+
+.user-card hr{
+margin:20px 0;
+border:1px solid #2b3139;
+}
+
+.user-card button{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+color:white;
+}
+
+.user-card button:nth-of-type(1){
+background:#16a34a;
+}
+
+.user-card button:nth-of-type(2){
+background:#dc2626;
+}
+
+.user-card button:nth-of-type(3){
+background:#2563eb;
+}
+
+.user-card button:nth-of-type(4){
+background:#f59e0b;
+}
+
+.user-card button:hover{
+opacity:0.85;
+}
+

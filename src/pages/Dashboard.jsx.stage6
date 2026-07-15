@@ -1,0 +1,91 @@
+import { useEffect, useState } from "react";
+import { getWallet, getDZC } from "../services/api";
+
+
+function Dashboard(){
+
+    const [wallet,setWallet] = useState(null);
+    const [coin,setCoin] = useState(null);
+
+    const user = JSON.parse(
+        localStorage.getItem("user")
+    );
+
+
+    useEffect(()=>{
+
+        async function load(){
+
+            const w = await getWallet(user.id);
+            const c = await getDZC();
+
+            setWallet(w.wallet);
+            setCoin(c.coin);
+
+        }
+
+        load();
+
+    },[]);
+
+
+
+    return (
+
+        <div style={{
+            background:"#111",
+            color:"#fff",
+            minHeight:"100vh",
+            padding:"30px",
+            textAlign:"center"
+        }}>
+
+
+        <h1>
+            EL WAFAA Exchange
+        </h1>
+
+
+        <h2>
+            مرحبا {user.username}
+        </h2>
+
+
+        {
+            wallet && (
+
+            <div>
+
+                <h3>
+                    💵 USDT : {wallet.usdt}
+                </h3>
+
+                <h3>
+                    🪙 DZC : {wallet.dzc}
+                </h3>
+
+            </div>
+
+            )
+        }
+
+
+        {
+            coin && (
+
+            <h3>
+                سعر DZC : {coin.price} USDT
+            </h3>
+
+            )
+        }
+
+
+        </div>
+
+    );
+
+}
+
+
+export default Dashboard;

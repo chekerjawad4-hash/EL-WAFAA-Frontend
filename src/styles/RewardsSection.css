@@ -1,0 +1,24 @@
+.rewards-section{
+    padding:20px;
+}
+
+.rewards-list{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.reward-card{
+    min-width:260px;
+    background:#171b22;
+    border-radius:15px;
+    padding:18px;
+}
+
+.reward-card h3{
+    color:#f5c542;
+}
+
+.reward-card p{
+    color:#ccc;
+}

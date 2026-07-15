@@ -1,0 +1,34 @@
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at top,#2b0008 0%,#12161f 45%,#05070b 100%);
+  overflow-x:hidden;
+}
+
+.bg-coin{
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.bg-coin img{
+  width:900px;
+  opacity:.18;
+  filter:drop-shadow(0 0 80px rgba(255,0,0,.45));
+  animation:rotateCoin 90s linear infinite,
+            floatCoin 8s ease-in-out infinite;
+}
+
+@keyframes rotateCoin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+@keyframes floatCoin{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+}

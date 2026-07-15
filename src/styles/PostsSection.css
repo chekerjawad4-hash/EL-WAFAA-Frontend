@@ -1,0 +1,33 @@
+.posts-section{
+    padding:20px;
+}
+
+.posts-section h2{
+    color:#fff;
+}
+
+.posts-section{
+    overflow:hidden;
+}
+
+.posts-section > div:not(:first-child){
+    display:inline-block;
+    vertical-align:top;
+}
+
+.post-card{
+    width:260px;
+    display:inline-block;
+    margin-right:15px;
+    background:#171b22;
+    border-radius:15px;
+    padding:16px;
+}
+
+.post-card h3{
+    color:#e11d2e;
+}
+
+.post-card p{
+    color:#ccc;
+}

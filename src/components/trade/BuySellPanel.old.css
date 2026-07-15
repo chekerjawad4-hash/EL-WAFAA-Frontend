@@ -1,0 +1,57 @@
+.trade-box{
+background:#111;
+padding:15px;
+border-radius:6px;
+}
+
+
+.tabs{
+display:flex;
+gap:10px;
+margin-bottom:15px;
+}
+
+
+.tabs button{
+flex:1;
+background:#1e2329;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+}
+
+
+.tabs .active{
+background:#0ecb81;
+color:black;
+}
+
+
+.trade-box input{
+width:100%;
+box-sizing:border-box;
+margin:8px 0;
+padding:12px;
+background:#0b0e11;
+border:1px solid #333;
+color:white;
+}
+
+
+.total{
+color:#aaa;
+margin:15px 0;
+}
+
+
+.order-btn{
+width:100%;
+padding:14px;
+background:#0ecb81;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+

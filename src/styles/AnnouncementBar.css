@@ -1,0 +1,33 @@
+.announcement-bar{
+    width:100%;
+    height:42px;
+    overflow:hidden;
+    background:#161b22;
+    border-bottom:1px solid #2b3139;
+    color:#fff;
+    display:flex;
+    align-items:center;
+}
+
+.announcement-track{
+    display:flex;
+    gap:80px;
+    white-space:nowrap;
+    animation:scrollNews 25s linear infinite;
+    padding-right:100%;
+}
+
+.announcement-track span{
+    color:#f5c542;
+    font-size:15px;
+    font-weight:600;
+}
+
+@keyframes scrollNews{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}

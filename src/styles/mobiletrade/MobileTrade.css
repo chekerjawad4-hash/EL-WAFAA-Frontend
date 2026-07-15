@@ -1,0 +1,171 @@
+body{
+background:#0b0e11;
+color:white;
+margin:0;
+}
+
+.mobile-trade{
+min-height:100vh;
+background:#0b0e11;
+}
+
+.mobile-chart{
+height:420px;
+background:#11161c;
+border-top:1px solid #202630;
+border-bottom:1px solid #202630;
+}
+
+.mobile-content{
+height:430px;
+overflow:auto;
+background:#11161c;
+}
+
+.market-selector{
+padding:12px;
+background:#111827;
+border-bottom:1px solid #222;
+}
+
+.market-selector input{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+background:#1a1a1a;
+color:#fff;
+border:1px solid #333;
+border-radius:8px;
+outline:none;
+}
+
+.market-selector select{
+width:100%;
+padding:10px;
+background:#1a1a1a;
+color:#fff;
+border:1px solid #333;
+border-radius:8px;
+outline:none;
+}
+
+.market-selector option{
+background:#1a1a1a;
+color:#fff;
+}
+
+
+.market-modal{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,.75);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.market-box{
+width:95%;
+max-width:420px;
+height:80vh;
+background:#111827;
+border:1px solid #2a2a2a;
+border-radius:16px;
+padding:16px;
+display:flex;
+flex-direction:column;
+}
+
+.market-box input{
+width:100%;
+padding:12px;
+background:#1a1a1a;
+color:#fff;
+border:1px solid #333;
+border-radius:10px;
+outline:none;
+margin-bottom:12px;
+}
+
+.market-list{
+flex:1;
+overflow-y:auto;
+}
+
+.market-item{
+padding:12px;
+border-bottom:1px solid #222;
+color:#fff;
+cursor:pointer;
+}
+
+.market-item:hover{
+background:#1f2937;
+}
+
+.market-box button{
+margin-top:12px;
+padding:12px;
+background:#e11d48;
+color:#fff;
+border:none;
+border-radius:10px;
+}
+
+.pair-button{
+width:100%;
+padding:12px;
+background:#111827;
+color:#fff;
+border:1px solid #333;
+border-radius:10px;
+font-size:16px;
+}
+
+
+.coin-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+}
+
+.coin-price{
+font-size:13px;
+color:#aaa;
+}
+
+.up{
+color:#16c784;
+}
+
+.down{
+color:#ea3943;
+}
+
+
+.star-btn{
+background:none;
+border:none;
+color:#f5c542;
+font-size:20px;
+cursor:pointer;
+}
+
+
+.market-box button{
+background:#2563eb;
+color:#fff;
+font-weight:bold;
+}
+
+.pair-button{
+background:#0b0b0b;
+border:1px solid #f5c542;
+color:#fff;
+}
+
