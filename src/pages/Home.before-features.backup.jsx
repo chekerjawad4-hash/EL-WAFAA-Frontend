@@ -146,54 +146,7 @@ marginTop:"40px"
 
       <TrendingCoins />
 
-<section
-style={{
-padding:"30px 20px"
-}}
->
-
-<h2
-style={{
-textAlign:"center",
-marginBottom:"25px"
-}}
->
-لماذا EL WAFAA؟
-</h2>
-
-<div
-style={{
-display:"grid",
-gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))",
-gap:"18px"
-}}
->
-
-<div style={{background:"#171b22",padding:"20px",borderRadius:"14px"}}>
-<h3>🔒 أمان عالي</h3>
-<p>حماية قوية للحسابات والمعاملات.</p>
-</div>
-
-<div style={{background:"#171b22",padding:"20px",borderRadius:"14px"}}>
-<h3>⚡ تنفيذ سريع</h3>
-<p>تنفيذ سريع ومستقر لأوامر التداول.</p>
-</div>
-
-<div style={{background:"#171b22",padding:"20px",borderRadius:"14px"}}>
-<h3>💰 رسوم تنافسية</h3>
-<p>رسوم منخفضة لتقليل تكلفة التداول.</p>
-</div>
-
-<div style={{background:"#171b22",padding:"20px",borderRadius:"14px"}}>
-<h3>📞 دعم فني</h3>
-<p>فريق دعم لمساعدتك عند الحاجة.</p>
-</div>
-
-</div>
-
-</section>
-
-<PostsSection />
+      <PostsSection />
 
       <BottomNav />
       <RewardsSection />

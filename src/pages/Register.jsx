@@ -22,6 +22,8 @@ email,
 password
 );
 
+console.log("REGISTER RESULT:", result);
+
 if(result.success){
 
 setMessage("تم إنشاء الحساب ✅");

@@ -1,0 +1,244 @@
+.binance-layout{
+background:#0b0e11;
+color:#fff;
+min-height:100vh;
+}
+
+
+.top-bar{
+height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 20px;
+border-bottom:1px solid #222;
+}
+
+
+.stats{
+display:flex;
+gap:30px;
+color:#aaa;
+font-size:14px;
+}
+
+
+
+.main-area{
+display:grid;
+grid-template-columns:200px 1fr 320px;
+height:calc(100vh - 70px);
+}
+
+
+
+/* الأسواق */
+
+.market-list{
+background:#111;
+border-right:1px solid #222;
+padding:10px;
+}
+
+
+.market-row{
+padding:14px;
+cursor:pointer;
+border-bottom:1px solid #222;
+}
+
+
+.market-row:hover{
+background:#1e2329;
+}
+
+
+
+/* الوسط */
+
+.center-panel{
+padding:10px;
+}
+
+
+.chart-container{
+height:480px;
+background:#111;
+border:1px solid #222;
+}
+
+
+.order-panel{
+margin-top:10px;
+background:#111;
+padding:10px;
+}
+
+
+.recent{
+margin-top:10px;
+background:#111;
+padding:10px;
+}
+
+
+
+
+/* الجانب */
+
+.right-panel{
+background:#111;
+border-left:1px solid #222;
+padding:10px;
+}
+
+
+.orderbook{
+height:450px;
+overflow:auto;
+}
+
+
+.wallet{
+margin-top:20px;
+}
+
+
+
+/* السعر */
+
+.live-price{
+color:#0ecb81;
+font-size:22px;
+font-weight:bold;
+}
+
+
+.bottom-trade{
+margin-top:15px;
+background:#111;
+padding:15px;
+border-top:1px solid #222;
+}
+
+
+.center-panel{
+display:flex;
+flex-direction:column;
+}
+
+.chart-container{
+order:1;
+}
+
+.recent{
+order:2;
+}
+
+.bottom-trade{
+order:3;
+margin-top:15px;
+}
+
+
+.center-panel{
+display:flex;
+flex-direction:column;
+}
+
+.chart-container{
+order:1;
+}
+
+.recent{
+order:2;
+}
+
+.bottom-trade{
+order:3;
+margin-top:15px;
+}
+
+
+.market-list input{
+width:100%;
+padding:10px 12px;
+margin:10px 0 15px;
+background:#1e2329;
+border:1px solid #2b3139;
+border-radius:6px;
+color:#fff;
+outline:none;
+font-size:14px;
+}
+
+.market-list input::placeholder{
+color:#888;
+}
+
+
+@media (max-width:768px){
+
+.main-area{
+display:flex;
+flex-direction:column;
+height:auto;
+}
+
+.market-list{
+width:100%;
+max-height:220px;
+overflow:auto;
+border-right:none;
+border-bottom:1px solid #222;
+}
+
+.right-panel{
+width:100%;
+border-left:none;
+margin-top:15px;
+}
+
+.chart-container{
+height:350px;
+}
+
+}
+
+
+.top-bar{
+display:flex;
+justify-content:flex-start;
+align-items:flex-start;
+padding:12px 15px;
+height:auto;
+border-bottom:1px solid #222;
+background:#0b0e11;
+}
+
+.pair-info{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:4px;
+}
+
+.pair-info h2{
+margin:0;
+font-size:22px;
+font-weight:bold;
+color:#fff;
+}
+
+.pair-stats{
+display:flex;
+gap:10px;
+font-size:14px;
+color:#999;
+}
+
+.change{
+color:#0ecb81;
+font-weight:bold;
+}
+
