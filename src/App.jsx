@@ -5,7 +5,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Markets from "./pages/Markets";
-import Trade from "./pages/TradeBinance";
+import Trade from "./pages/TradeNew";
+import TradeNew from "./pages/TradeNew";
 import Futures from "./pages/Futures";
 import Assets from "./pages/Assets";
 import MobileTrade from "./pages/MobileTrade";
@@ -34,6 +35,7 @@ function App(){
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                                                           <Route path="/markets" element={<Markets />} />
                                                           <Route path="/trade" element={<ProtectedRoute><Trade /></ProtectedRoute>} />
+        <Route path="/trade-new" element={<ProtectedRoute><TradeNew /></ProtectedRoute>} />
                                                           <Route path="/futures" element={<ProtectedRoute><Futures /></ProtectedRoute>} />
           <Route path="/mobile-trade" element={<MobileTrade />} />
                                                           <Route path="/assets" element={<ProtectedRoute><Assets /></ProtectedRoute>} />

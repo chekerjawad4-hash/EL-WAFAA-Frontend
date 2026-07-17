@@ -1,0 +1,63 @@
+.pair-selector-new{
+
+position:absolute;
+
+top:60px;
+
+left:10px;
+
+width:280px;
+
+background:#161a20;
+
+border:1px solid #242933;
+
+padding:10px;
+
+z-index:20;
+
+border-radius:10px;
+
+}
+
+
+.pair-selector-new input{
+
+width:100%;
+
+background:#0b0e11;
+
+border:1px solid #333;
+
+color:#fff;
+
+padding:10px;
+
+border-radius:6px;
+
+}
+
+
+.pairs-list{
+
+max-height:400px;
+
+overflow:auto;
+
+}
+
+
+.pairs-list div{
+
+padding:10px;
+
+border-bottom:1px solid #222;
+
+}
+
+
+.pairs-list div:hover{
+
+background:#242933;
+
+}

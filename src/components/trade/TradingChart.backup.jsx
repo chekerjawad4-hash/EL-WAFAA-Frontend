@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ReactECharts from "echarts-for-react";
 import { getCandles } from "../../services/api";
 
-function TradingChart({ symbol, interval }) {
+function TradingChart({ symbol }) {
 
   const [candles,setCandles] = useState([]);
 
@@ -11,7 +11,7 @@ function TradingChart({ symbol, interval }) {
     async function load(){
 
       const binanceSymbol = symbol.replace("/", "");
-      const result = await getCandles(binanceSymbol, interval);
+      const result = await getCandles(binanceSymbol);
 
       if(result.success){
         setCandles(result.candles);
@@ -21,53 +21,7 @@ function TradingChart({ symbol, interval }) {
 
     load();
 
-    const wsSymbol = symbol.replace("/", "").toLowerCase();
-
-    const ws = new WebSocket(
-      `wss://stream.binance.com:9443/ws/${wsSymbol}@kline_${interval}`
-    );
-
-    ws.onmessage=(event)=>{
-
-      const data = JSON.parse(event.data);
-
-      const k = data.k;
-
-      const candle = {
-        time: Math.floor(k.t / 1000),
-        open: k.o,
-        high: k.h,
-        low: k.l,
-        close: k.c
-      };
-
-      setCandles(prev=>{
-
-        const list=[...prev];
-
-        if(list.length){
-
-          const last=list[list.length-1];
-
-          if(last.time===candle.time){
-            list[list.length-1]=candle;
-          }else{
-            list.push(candle);
-          }
-
-        }else{
-          list.push(candle);
-        }
-
-        return list.slice(-100);
-
-      });
-
-    };
-
-    return ()=>ws.close();
-
-  },[symbol,interval]);
+  },[symbol]);
 
 
   const option = {

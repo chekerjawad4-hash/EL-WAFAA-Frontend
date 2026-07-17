@@ -39,6 +39,7 @@ background:#f6465d !important;
 }
 
 .trade-panel input{
+opacity:1;
 padding:12px;
 background:#0b0e11;
 border:1px solid #2a3441;
@@ -102,3 +103,25 @@ color:#fff;
 font-weight:bold;
 }
 
+
+input[type="range"]{
+width:100%;
+margin:12px 0;
+cursor:pointer;
+}
+
+
+.percent-slider{
+width:100%;
+margin:12px 0;
+cursor:pointer;
+accent-color:#f0b90b;
+}
+
+
+.trade-panel input:disabled{
+background:#1b1f24;
+color:#f0b90b;
+cursor:not-allowed;
+font-weight:bold;
+}

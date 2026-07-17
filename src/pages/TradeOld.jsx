@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 
 import LivePrice from "../components/trade/LivePrice";
 import TradingChart from "../components/trade/TradingChart";
-import TradeToolbar from "../components/trade/TradeToolbar";
 import LiveOrderBook from "../components/trade/LiveOrderBook";
 import RecentTrades from "../components/trade/RecentTrades";
 import BuySellPanel from "../components/trade/BuySellPanel";
@@ -20,7 +19,6 @@ const symbolFromUrl=searchParams.get("symbol") || "BTCUSDT";
 const [pair,setPair]=useState(symbolFromUrl);
 const [markets,setMarkets]=useState([]);
 const [search,setSearch]=useState("");
-const [interval,setInterval]=useState("1m");
 
 
 useEffect(()=>{
@@ -48,7 +46,7 @@ return(
 <header className="top-bar">
 
 <div>
-<h2>🚀 NEW TRADE PAGE - {pair}</h2>
+<h2>{pair}</h2>
 <LivePrice symbol={pair}/>
 </div>
 
@@ -98,9 +96,7 @@ onClick={()=>setPair(item)}
 
 <div className="chart-container">
 
-<TradeToolbar interval={interval} setInterval={setInterval} />
-
-<TradingChart symbol={pair} interval={interval}/>
+<TradingChart symbol={pair}/>
 
 </div>
 

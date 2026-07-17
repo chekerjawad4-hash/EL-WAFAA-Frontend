@@ -12,7 +12,7 @@ async function load(){
 try{
 
 const res=await fetch(
-"http://127.0.0.1:3001/api/markets"
+"https://el-wafaa-backend.onrender.com/api/markets"
 );
 
 const data=await res.json();
@@ -73,11 +73,11 @@ onClick={onOpen}
 </div>
 
 <div className={
-market?.change24h >= 0
+market?.change >= 0
 ? "change positive"
 : "change negative"
 }>
-{market ? `${Number(market.change24h).toFixed(2)}%` : "..."} 
+{market ? `${Number(market.change).toFixed(2)}%` : "..."} 
 </div>
 
 </div>

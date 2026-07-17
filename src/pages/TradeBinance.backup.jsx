@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 import TradingChart from "../components/trade/TradingChart";
 import LivePrice from "../components/trade/LivePrice";
@@ -16,18 +16,16 @@ export default function TradeBinance(){
 const [pair,setPair]=useState("BTCUSDT");
 const [search,setSearch]=useState("");
 
-const [markets,setMarkets]=useState([]);
-
-useEffect(()=>{
-
-fetch("https://el-wafaa-backend.onrender.com/api/markets")
-.then(res=>res.json())
-.then(data=>{
-setMarkets(data.markets.map(m=>m.symbol));
-})
-.catch(err=>console.log(err));
-
-},[]);
+const markets=[
+"BTCUSDT",
+"ETHUSDT",
+"BNBUSDT",
+"SOLUSDT",
+"XRPUSDT",
+"DOGEUSDT",
+"ADAUSDT",
+"DZCUSDT"
+];
 
 return(
 
@@ -128,7 +126,7 @@ onSelect={setPair}
 
 <div className="buy">
 
-<BuySellPanel pair={pair}/>
+<BuySellPanel/>
 
 </div>
 

@@ -5,6 +5,7 @@ function LiveOrderBook({symbol}){
 
 const [asks,setAsks]=useState([]);
 const [bids,setBids]=useState([]);
+const [lastPrice,setLastPrice]=useState("0.00");
 
 useEffect(()=>{
 
@@ -12,12 +13,17 @@ const ws=new WebSocket(
 `wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@depth20`
 );
 
+ws.onerror=()=>{
+console.log("OrderBook websocket error:",symbol);
+};
+
 ws.onmessage=(e)=>{
 
 const data=JSON.parse(e.data);
 
 setAsks(data.asks.slice(0,10));
 setBids(data.bids.slice(0,10));
+setLastPrice(data.bids[0]?.[0] || "0.00");
 
 };
 
@@ -43,7 +49,7 @@ Order Book
 {
 asks.map((a,i)=>(
 <div key={i} className="row sell">
-<span>{a[0]}</span>
+<span>{Number(a[0]).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</span>
 <span>{a[1]}</span>
 </div>
 ))
@@ -52,7 +58,7 @@ asks.map((a,i)=>(
 </div>
 
 <div className="last-price">
-Market
+{lastPrice} USDT
 </div>
 
 <div className="ob-buy">
@@ -60,7 +66,7 @@ Market
 {
 bids.map((b,i)=>(
 <div key={i} className="row buy">
-<span>{b[0]}</span>
+<span>{Number(b[0]).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</span>
 <span>{b[1]}</span>
 </div>
 ))

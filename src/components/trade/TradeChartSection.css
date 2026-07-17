@@ -1,0 +1,30 @@
+.chart-section{
+background:#0b0e11;
+border-bottom:1px solid #242933;
+border-radius:10px;
+overflow:hidden;
+}
+
+.chart-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 15px;
+background:#161b22;
+border-bottom:1px solid #242933;
+}
+
+.chart-symbol{
+font-size:18px;
+font-weight:700;
+color:#fff;
+}
+
+.chart-interval{
+padding:4px 10px;
+background:#1e2329;
+border:1px solid #2b3139;
+border-radius:6px;
+color:#f0b90b;
+font-weight:bold;
+}

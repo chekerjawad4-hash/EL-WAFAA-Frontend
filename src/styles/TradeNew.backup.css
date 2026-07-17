@@ -1,0 +1,41 @@
+.trade-new{
+
+min-height:100vh;
+
+background:
+radial-gradient(
+circle at top right,
+rgba(220,30,30,0.15),
+transparent 35%
+),
+#0b0e11;
+
+color:white;
+
+font-family:Arial,sans-serif;
+
+}
+
+
+.trade-middle{
+
+display:flex;
+
+flex-direction:column;
+
+gap:0;
+
+}
+
+
+@media(min-width:768px){
+
+.trade-middle{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}

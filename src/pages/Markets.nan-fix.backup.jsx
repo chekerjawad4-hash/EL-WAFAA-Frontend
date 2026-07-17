@@ -51,8 +51,7 @@ function Markets(){
 
         {filtered.map((coin,index)=>{
 
-          const change = Number(coin.change24h || 0);
-          const positive = change >= 0;
+          const positive=Number(coin.change24h)>=0;
 
           return(
 
@@ -81,7 +80,7 @@ function Markets(){
                 }
               >
                 {positive?"+":""}
-                {(change*100).toFixed(2)}%
+                {(Number(coin.change24h)*100).toFixed(2)}%
               </span>
 
             </Link>

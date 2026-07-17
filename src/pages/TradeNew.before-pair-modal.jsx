@@ -1,0 +1,73 @@
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
+import TradeHeader from "../components/trade/TradeHeader";
+import TradeToolbar from "../components/trade/TradeToolbar";
+import TradeChartSection from "../components/trade/TradeChartSection";
+import TradeOrderBook from "../components/trade/TradeOrderBook";
+import TradeRecentTrades from "../components/trade/TradeRecentTrades";
+import TradeBuySell from "../components/trade/TradeBuySell";
+
+import "../styles/TradeNew.css";
+
+
+function TradeNew(){
+
+const location = useLocation();
+const urlSymbol = new URLSearchParams(location.search).get("symbol");
+
+const [pair,setPair]=useState(urlSymbol || "BTCUSDT");
+const [interval,setInterval]=useState("1h");
+
+
+function openPair(){
+
+console.log("open pair selector");
+
+}
+
+
+return(
+
+<div className="trade-new">
+
+<TradeHeader
+pair={pair}
+onOpen={openPair}
+/>
+
+
+<TradeToolbar interval={interval} setInterval={setInterval} />
+
+
+<TradeChartSection interval={interval}
+symbol={pair}
+/>
+
+
+<div className="trade-middle">
+
+<TradeOrderBook
+symbol={pair}
+/>
+
+
+<TradeRecentTrades
+symbol={pair}
+/>
+
+</div>
+
+
+<TradeBuySell
+pair={pair}
+/>
+
+
+</div>
+
+);
+
+}
+
+export default TradeNew;

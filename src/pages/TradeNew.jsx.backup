@@ -1,0 +1,80 @@
+import { useState } from "react";
+
+import TradeHeader from "../components/trade/TradeHeader";
+import TradeToolbar from "../components/trade/TradeToolbar";
+import TradeChartSection from "../components/trade/TradeChartSection";
+import TradeOrderBook from "../components/trade/TradeOrderBook";
+import TradeRecentTrades from "../components/trade/TradeRecentTrades";
+import TradeBuySell from "../components/trade/TradeBuySell";
+import PairSelectorNew from "../components/trade/PairSelectorNew";
+
+import "../styles/TradeNew.css";
+
+
+function TradeNew(){
+
+const [pair,setPair]=useState("BTC/USDT");
+const symbol = pair.replace("/","");
+const [openSelector,setOpenSelector]=useState(false);
+const [interval,setInterval]=useState("1m");
+
+
+return(
+
+<div className="trade-new">
+
+
+<TradeHeader
+pair={pair}
+onOpen={()=>setOpenSelector(!openSelector)}
+/>
+
+
+{openSelector && (
+
+<PairSelectorNew
+onSelect={(coin)=>{
+
+setPair(coin.replace("USDT","/USDT"));
+setOpenSelector(false);
+
+}}
+/>
+
+)}
+
+
+<TradeToolbar interval={interval} setInterval={setInterval}/>
+
+
+<TradeChartSection
+symbol={symbol} interval={interval}
+/>
+
+
+<div className="trade-middle">
+
+<TradeOrderBook
+symbol={symbol} interval={interval}
+/>
+
+
+<TradeRecentTrades
+symbol={symbol} interval={interval}
+/>
+
+</div>
+
+
+<TradeBuySell
+pair={pair}
+/>
+
+
+</div>
+
+);
+
+}
+
+export default TradeNew;

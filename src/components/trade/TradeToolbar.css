@@ -1,0 +1,78 @@
+.trade-toolbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#161a20;
+padding:10px;
+color:#fff;
+border-bottom:1px solid #242933;
+}
+
+
+.time-list{
+display:flex;
+gap:12px;
+font-size:13px;
+}
+
+
+.time-list span{
+color:#848e9c;
+}
+
+
+.time-list span:first-child{
+color:#fff;
+}
+
+
+.tools{
+display:flex;
+gap:8px;
+}
+
+
+.tools button{
+background:#0b0e11;
+border:1px solid #242933;
+color:#fff;
+padding:6px 10px;
+border-radius:6px;
+font-size:12px;
+}
+
+@media (max-width:768px){
+
+.trade-toolbar{
+overflow-x:auto;
+overflow-y:hidden;
+white-space:nowrap;
+gap:10px;
+}
+
+.time-list,
+.tools{
+flex-shrink:0;
+}
+
+}
+
+.time-list button{
+background:transparent;
+border:0;
+color:#848e9c;
+padding:4px 8px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.time-list button:hover{
+color:#fff;
+}
+
+.time-list .active-time{
+background:#f0b90b;
+color:#000;
+font-weight:bold;
+}
+

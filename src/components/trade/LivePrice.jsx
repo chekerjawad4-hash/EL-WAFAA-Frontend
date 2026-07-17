@@ -10,10 +10,14 @@ const ws=new WebSocket(
 `wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@ticker`
 );
 
+ws.onerror=()=>{
+console.log("Price websocket error:",symbol);
+};
+
 ws.onmessage=(event)=>{
 
 const data=JSON.parse(event.data);
-setPrice(data.c);
+setPrice(Number(data.c).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}));
 
 };
 

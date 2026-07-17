@@ -12,7 +12,7 @@ async function load(){
 try{
 
 const res=await fetch(
-"http://127.0.0.1:3001/api/markets"
+"https://el-wafaa-backend.onrender.com/api/markets"
 );
 
 const data=await res.json();
@@ -39,7 +39,7 @@ console.log(err);
 
 load();
 
-const timer=setInterval(load,2000);
+const timer=setInterval(load,10000);
 
 return()=>clearInterval(timer);
 
@@ -69,15 +69,15 @@ onClick={onOpen}
 <div className="main-price">
 
 <div className="price">
-{market ? Number(market.price).toLocaleString(undefined,{maximumFractionDigits:8}) : "..."} 
+{market ? market.price : "..."}
 </div>
 
 <div className={
-market?.change24h >= 0
+market?.change >= 0
 ? "change positive"
 : "change negative"
 }>
-{market ? `${Number(market.change24h).toFixed(2)}%` : "..."} 
+{market ? market.change+"%" : "..."}
 </div>
 
 </div>
@@ -87,17 +87,17 @@ market?.change24h >= 0
 
 <div>
 <span>24h High</span>
-<strong>{market ? Number(market.high).toLocaleString() : "--"}</strong>
+<strong>{market?.high || "--"}</strong>
 </div>
 
 <div>
 <span>24h Low</span>
-<strong>{market ? Number(market.low).toLocaleString() : "--"}</strong>
+<strong>{market?.low || "--"}</strong>
 </div>
 
 <div>
 <span>Volume</span>
-<strong>{market ? Number(market.volume).toLocaleString() : "--"}</strong>
+<strong>{market?.volume || "--"}</strong>
 </div>
 
 </div>

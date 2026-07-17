@@ -25,7 +25,7 @@ function Home(){
       <AnnouncementBar />
 
       <div style={{display:"flex",gap:"15px",margin:"20px"}}>
-        <button onClick={()=>navigate("/trade")} style={{padding:"14px 25px",background:"#f0b90b",border:"none",borderRadius:"12px",fontSize:"16px",fontWeight:"bold"}}>
+        <button onClick={()=>navigate("/trade-new")} style={{padding:"14px 25px",background:"#f0b90b",border:"none",borderRadius:"12px",fontSize:"16px",fontWeight:"bold"}}>
           🚀 ابدأ التداول
         </button>
 

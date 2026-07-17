@@ -1,0 +1,46 @@
+.recent-box{
+background:#111;
+color:white;
+padding:12px;
+border-radius:10px;
+font-size:13px;
+}
+
+.recent-title{
+font-size:16px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.recent-head,
+.trade-row{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+padding:6px 0;
+}
+
+.recent-head{
+color:#888;
+border-bottom:1px solid #333;
+}
+
+.trade-row{
+border-bottom:1px solid #222;
+}
+
+.trade-row span:first-child{
+color:#0ecb81;
+}
+
+.trade-row.buy span:first-child{
+color:#0ecb81;
+}
+
+.trade-row.sell span:first-child{
+color:#f6465d;
+}
+
+.trade-row:hover{
+background:#1b1f24;
+transition:.2s;
+}
