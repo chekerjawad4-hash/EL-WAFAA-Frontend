@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -28,15 +27,14 @@ function App(){
 
       <Routes>
 
-        <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
 <Route path="/register" element={<Register />} />
 
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                                                           <Route path="/markets" element={<Markets />} />
-                                                          <Route path="/trade" element={<Trade />} />
+                                                          <Route path="/trade" element={<ProtectedRoute><Trade /></ProtectedRoute>} />
         <Route path="/trade-new" element={<ProtectedRoute><TradeNew /></ProtectedRoute>} />
                                                           <Route path="/futures" element={<ProtectedRoute><Futures /></ProtectedRoute>} />
           <Route path="/mobile-trade" element={<MobileTrade />} />

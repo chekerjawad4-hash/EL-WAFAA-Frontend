@@ -34,7 +34,7 @@ result.token
 setMessage("تم الدخول بنجاح ✅");
 
 setTimeout(()=>{
-navigate("/");
+navigate("/home");
 },800);
 
 }else{

@@ -1,14 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import HomeTopBar from "../components/home/HomeTopBar";
-import SearchBar from "../components/home/SearchBar";
-import BalanceCard from "../components/home/BalanceCard";
-import HeroSlider from "../components/home/HeroSlider";
-import QuickActions from "../components/home/QuickActions";
-import MarketCards from "../components/home/MarketCards";
-import HomeNews from "../components/home/HomeNews";
-import HomeRewards from "../components/home/HomeRewards";
 import AnnouncementBar from "../components/AnnouncementBar";
 import BottomNav from "../components/BottomNav";
 import NewsSection from "../components/NewsSection";
@@ -27,53 +19,27 @@ function Home(){
   const [markets,setMarkets]=useState([]);
   const [loading,setLoading]=useState(true);
 
-//  useEffect(()=>{
-//    async function load(){
-//      try{
-//        const res=await fetch("https://el-wafaa-backend.onrender.com/api/markets");
-//        const data=await res.json();
-//        setMarkets(data);
-//      }catch(e){
-//        console.error(e);
-//      }finally{
-//        setLoading(false);
-//      }
-//    }
-//
-//    load();
-//  },[]);
+  useEffect(()=>{
+    async function load(){
+      try{
+        const res=await fetch("https://el-wafaa-backend.onrender.com/api/markets");
+        const data=await res.json();
+        setMarkets(data);
+      }catch(e){
+        console.error(e);
+      }finally{
+        setLoading(false);
+      }
+    }
+
+    load();
+  },[]);
 
   return(
 
     <div style={{background:"#0b0f14",minHeight:"100vh",color:"#fff"}}>
 
       <Header />
-
-      <HomeTopBar />
-
-      <SearchBar />
-
-      <BalanceCard />
-
-      <HeroSlider />
-
-      <QuickActions />
-
-      <MarketCards />
-
-      <HomeNews />
-
-      <HomeRewards />
-
-
-
-
-
-
-
-
-
-
 
       <AnnouncementBar />
 
@@ -222,13 +188,13 @@ marginTop:"40px"
 
       </div>
 
-       
+      <HomeMenu />
 
 
 
-       
+      <NewsSection />
 
-       
+      <TrendingCoins />
 
 <section
 style={{
@@ -277,10 +243,10 @@ gap:"18px"
 
 </section>
 
- 
+<PostsSection />
 
       <BottomNav />
-       
+      <RewardsSection />
 
     </div>
 

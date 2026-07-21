@@ -1,0 +1,77 @@
+/* ===== HERO SLIDER FINAL ===== */
+
+.hero-slider{
+  margin:6px 12px;
+}
+
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  min-height:120px;
+  padding:16px;
+  border-radius:20px;
+  border:1px solid #2b3139;
+  background:linear-gradient(135deg,#1b2230,#0f141a)!important;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-card h2{
+  margin:0;
+  font-size:26px;
+  font-weight:800;
+  color:#fff;
+}
+
+.hero-card p{
+  margin:8px 0 14px;
+  max-width:55%;
+  color:#b7bdc6;
+  line-height:1.6;
+}
+
+.hero-card button{
+  width:150px;
+  height:46px;
+  border:none;
+  border-radius:12px;
+  background:#f0b90b;
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.hero-coin{
+  position:absolute;
+  right:20px;
+  bottom:10px;
+  width:100px;
+  animation:heroFloat 3s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+.hero-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:16px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#555;
+}
+
+.dot.active{
+  width:28px;
+  border-radius:999px;
+  background:#f0b90b;
+}
+

@@ -1,0 +1,41 @@
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0 12px 6px;
+  padding:4px 10px;
+  height:48px;
+  background:#171b22;
+  border:1px solid #2b3139;
+  border-radius:12px;
+}
+
+.search-icon{
+  font-size:18px;
+  color:#888;
+}
+
+.search-box input{
+  flex:1;
+  height:100%;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#fff;
+  font-size:14px;
+}
+
+.search-box input::placeholder{
+  color:#777;
+}
+
+.scan-btn{
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:10px;
+  background:#f0b90b;
+  color:#000;
+  font-size:16px;
+  cursor:pointer;
+}

@@ -1,0 +1,30 @@
+.home-topbar{
+  display:flex;
+  justify-content:center;
+  padding:4px 10px;
+  gap:0;
+}
+
+.home-topbar .tab{
+  background:#1b222d;
+  color:#9fa8b7;
+  border:none;
+  padding:10px 18px;
+  font-size:14px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.home-topbar .tab:first-child{
+  border-radius:10px 0 0 10px;
+}
+
+.home-topbar .tab:last-child{
+  border-radius:0 10px 10px 0;
+}
+
+.home-topbar .tab.active{
+  background:#2b3442;
+  color:#fff;
+  font-weight:700;
+}

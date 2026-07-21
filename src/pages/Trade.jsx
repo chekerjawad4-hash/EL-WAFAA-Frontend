@@ -13,7 +13,7 @@ import "../styles/Trade.css";
 
 
 function Trade(){
-
+console.log("TRADE PAGE LOADED");
 const [searchParams]=useSearchParams();
 const symbolFromUrl=searchParams.get("symbol") || "BTCUSDT";
 

@@ -1,0 +1,96 @@
+.market-section{
+  padding:8px 12px;
+}
+
+.market-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.market-header h3{
+  color:#fff;
+  font-size:22px;
+  margin:0;
+}
+
+.market-header span{
+  color:#f0b90b;
+  cursor:pointer;
+}
+
+.market-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.market-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(145deg,#171b22,#0d1117);
+  border:1px solid #2b3139;
+  border-radius:12px;
+  padding:8px 10px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.market-card:hover{
+  transform:translateY(-3px);
+  border-color:#f0b90b;
+}
+
+.market-left{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.coin-icon{
+  width:32px;
+  height:32px;
+}
+
+.market-left h4{
+  color:#fff;
+  margin:0 0 5px;
+  font-size:15px;
+}
+
+.market-left p{
+  margin:0;
+  color:#8b949e;
+}
+
+.market-right{
+  text-align:right;
+}
+
+.market-right strong{
+  display:block;
+  color:#fff;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.green{
+  color:#0ecb81;
+  font-weight:bold;
+}
+
+.red{
+  color:#f6465d;
+  font-weight:bold;
+}
+
+.green,
+.red{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:4px;
+  font-size:14px;
+}

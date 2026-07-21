@@ -1,0 +1,718 @@
+.home-topbar{
+display:flex;
+justify-content:center;
+padding:8px 12px;
+}
+
+.home-topbar .tab{
+background:#1b222d;
+color:#9fa8b7;
+border:none;
+padding:12px 26px;
+font-size:16px;
+cursor:pointer;
+transition:.2s;
+}
+
+.home-topbar .tab:first-child{
+border-radius:12px 0 0 12px;
+}
+
+.home-topbar .tab:last-child{
+border-radius:0 12px 12px 0;
+}
+
+.home-topbar .tab.active{
+background:#2b3442;
+color:#fff;
+font-weight:700;
+}
+
+.search-box{
+display:flex;
+align-items:center;
+gap:10px;
+margin:0 12px 6px;
+background:#171b22;
+border:1px solid #2b3139;
+border-radius:14px;
+padding:8px 12px;
+}
+
+.search-icon{
+font-size:18px;
+color:#888;
+}
+
+.search-box input{
+flex:1;
+background:transparent;
+border:none;
+outline:none;
+color:#fff;
+font-size:15px;
+}
+
+.search-box input::placeholder{
+color:#777;
+}
+
+.scan-btn{
+background:#f0b90b;
+color:#000;
+border:none;
+border-radius:10px;
+width:38px;
+height:38px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.balance-card{
+background:#171b22;
+margin:6px 12px;
+padding:10px;
+border-radius:18px;
+border:1px solid #2b3139;
+}
+
+
+.balance-card h1{
+margin:0;
+font-size:30px;
+font-weight:700;
+color:#fff;
+}
+
+
+
+.deposit-btn{
+margin-top:8px;
+width:100%;
+padding:10px;
+background:#f0b90b;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.balance-line{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.balance-info{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.balance-title{
+color:#8b949e;
+font-size:15px;
+}
+
+.balance-value{
+color:#fff;
+font-size:26px;
+font-weight:700;
+}
+
+.deposit-btn{
+background:#f0b90b;
+color:#000;
+border:none;
+padding:12px 22px;
+border-radius:12px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+}
+
+.hero-slider{
+margin:6px 12px;
+background:linear-gradient(135deg,#1b2230,#0f141a);
+border-radius:20px;
+overflow:hidden;
+border:1px solid #2b3139;
+}
+
+.hero-content{
+padding:16px;
+}
+
+.hero-badge{
+display:inline-block;
+background:#f0b90b;
+color:#000;
+padding:6px 12px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+margin-bottom:14px;
+}
+
+.hero-text h2{
+margin:0;
+font-size:28px;
+color:#fff;
+}
+
+.hero-text p{
+margin-top:12px;
+color:#b7bdc6;
+line-height:1.6;
+}
+
+.hero-btn{
+margin-top:8px;
+background:#f0b90b;
+color:#000;
+border:none;
+padding:12px 24px;
+border-radius:12px;
+font-weight:700;
+cursor:pointer;
+}
+
+.hero-dots{
+display:flex;
+justify-content:center;
+gap:8px;
+padding:0 0 18px;
+}
+
+.dot{
+width:8px;
+height:8px;
+background:#555;
+border-radius:50%;
+}
+
+.dot.active{
+width:24px;
+border-radius:999px;
+background:#f0b90b;
+}
+
+.hero-slider{
+margin:6px 12px;
+}
+
+.hero-card{
+padding-right:140px;
+background:linear-gradient(135deg,#202734,#11161d);
+border-radius:20px;
+padding:16px;
+min-height:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border:1px solid #2b3139;
+}
+
+.hero-card h2{
+margin:0;
+font-size:28px;
+color:#fff;
+}
+
+.hero-card p{
+margin:14px 0;
+color:#b7bdc6;
+}
+
+.hero-card button{
+width:120px;
+padding:12px;
+background:#f0b90b;
+border:none;
+border-radius:12px;
+font-weight:bold;
+}
+
+.hero-dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:14px;
+}
+
+.dot{
+width:8px;
+height:8px;
+background:#555;
+border-radius:50%;
+transition:.3s;
+}
+
+.dot.active{
+width:26px;
+background:#f0b90b;
+border-radius:999px;
+}
+
+.quick-actions{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+padding:0 20px 20px;
+}
+
+.quick-item{
+background:#171b22;
+border:1px solid #2b3139;
+border-radius:16px;
+padding:18px 10px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+transition:.2s;
+}
+
+.quick-item:hover{
+transform:translateY(-3px);
+}
+
+.quick-icon{
+color:#f0b90b;
+width:52px;
+height:46px;
+border-radius:50%;
+background:#222a35;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.quick-item span{
+color:#fff;
+font-size:14px;
+}
+
+.market-section{
+padding:12px;
+}
+
+.market-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.market-header h3{
+margin:0;
+color:#fff;
+}
+
+.market-header span{
+color:#f0b90b;
+font-size:14px;
+cursor:pointer;
+}
+
+.market-list{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.market-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#171b22;
+border:1px solid #2b3139;
+border-radius:14px;
+padding:16px;
+}
+
+.market-card h4{
+margin:0;
+color:#fff;
+}
+
+.market-card p{
+margin:6px 0 0;
+color:#9ca3af;
+}
+
+.green{
+color:#0ecb81;
+font-weight:bold;
+}
+
+.red{
+color:#f6465d;
+font-weight:bold;
+}
+
+.market-left{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.market-right{
+text-align:right;
+}
+
+.coin-icon{
+width:34px;
+height:34px;
+}
+
+.home-news{
+padding:12px;
+}
+
+.news-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:14px;
+}
+
+.news-header h3{
+margin:0;
+color:#fff;
+}
+
+.news-header span{
+color:#f0b90b;
+cursor:pointer;
+font-size:14px;
+}
+
+.news-card{
+background:#171b22;
+border:1px solid #2b3139;
+border-radius:14px;
+padding:16px;
+margin-bottom:12px;
+}
+
+.news-card h4{
+margin:0;
+color:#fff;
+font-size:15px;
+}
+
+.news-card p{
+margin-top:8px;
+color:#8b949e;
+font-size:13px;
+}
+
+.home-rewards{
+padding:12px;
+}
+
+.rewards-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.rewards-header h3{
+margin:0;
+color:#fff;
+}
+
+.rewards-header span{
+color:#f0b90b;
+font-size:14px;
+}
+
+.reward-list{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-bottom:10px;
+}
+
+.reward-card{
+min-width:250px;
+background:#171b22;
+border:1px solid #2b3139;
+border-radius:16px;
+padding:10px;
+}
+
+.reward-card h4{
+margin:0;
+color:#fff;
+}
+
+.reward-card p{
+margin:10px 0 16px;
+color:#9ca3af;
+line-height:1.5;
+}
+
+.reward-card button{
+background:#f0b90b;
+color:#000;
+border:none;
+padding:10px 20px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.hero-card{
+padding-right:140px;
+position:relative;
+overflow:hidden;
+border-radius:22px;
+padding:16px;
+min-height:140px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+border:1px solid #2b3139;
+transition:.4s;
+}
+
+.hero-card::after{
+content:"";
+position:absolute;
+right:-60px;
+top:-60px;
+width:180px;
+height:130px;
+border-radius:50%;
+background:rgba(240,185,11,.08);
+}
+
+.hero-card h2{
+font-size:30px;
+font-weight:700;
+margin:0;
+color:#fff;
+}
+
+.hero-card p{
+margin:12px 0 22px;
+font-size:15px;
+color:#d1d5db;
+}
+
+.hero-card button{
+width:120px;
+height:42px;
+border:none;
+border-radius:12px;
+background:#f0b90b;
+font-weight:bold;
+cursor:pointer;
+color:#000;
+}
+
+.hero-dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:14px;
+}
+
+.dot{
+width:8px;
+height:8px;
+background:#555;
+border-radius:50%;
+transition:.3s;
+}
+
+.dot.active{
+width:24px;
+background:#f0b90b;
+border-radius:999px;
+}
+
+.balance-row{
+flex-wrap:nowrap;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:18px;
+}
+
+.balance-left{
+flex:0 0 auto;
+}
+
+.balance-right{
+min-width:0;
+overflow:hidden;
+flex:1;
+text-align:right;
+}
+
+.balance-title{
+color:#9ca3af;
+font-size:14px;
+margin-bottom:8px;
+}
+
+.balance-right h1{
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+margin:0;
+font-size:32px;
+font-weight:700;
+color:#fff;
+}
+
+.balance-usd{
+margin-top:6px;
+color:#9ca3af;
+font-size:14px;
+}
+
+.balance-profit{
+margin-top:10px;
+color:#0ecb81;
+font-size:15px;
+}
+
+.deposit-btn{
+width:120px;
+height:46px;
+border:none;
+border-radius:12px;
+background:#f0b90b;
+color:#000;
+font-weight:700;
+font-size:16px;
+cursor:pointer;
+}
+
+.hero-card{
+padding-right:140px;
+position:relative;
+overflow:hidden;
+}
+
+.hero-coin{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+width:95px;
+height:95px;
+opacity:.95;
+filter:drop-shadow(0 0 18px rgba(240,185,11,.45));
+animation:heroFloat 3s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+0%{
+transform:translateY(-50%) rotate(0deg);
+}
+50%{
+transform:translateY(calc(-50% - 8px)) rotate(6deg);
+}
+100%{
+transform:translateY(-50%) rotate(0deg);
+}
+}
+
+.hero-card h2,
+.hero-card p,
+.hero-card button{
+position:relative;
+z-index:2;
+}
+
+.hero-coin{
+z-index:1;
+}
+
+/* ===== HERO SLIDER FINAL ===== */
+
+.hero-slider{
+  margin:6px 12px;
+}
+
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  min-height:150px;
+  padding:16px;
+  border-radius:20px;
+  border:1px solid #2b3139;
+  background:linear-gradient(135deg,#1b2230,#0f141a)!important;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-card h2{
+  margin:0;
+  font-size:32px;
+  font-weight:800;
+  color:#fff;
+}
+
+.hero-card p{
+  margin:14px 0 22px;
+  max-width:55%;
+  color:#b7bdc6;
+  line-height:1.6;
+}
+
+.hero-card button{
+  width:150px;
+  height:46px;
+  border:none;
+  border-radius:12px;
+  background:#f0b90b;
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.hero-coin{
+  position:absolute;
+  right:20px;
+  bottom:10px;
+  width:130px;
+  animation:heroFloat 3s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+.hero-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:16px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#555;
+}
+
+.dot.active{
+  width:28px;
+  border-radius:999px;
+  background:#f0b90b;
+}
+

@@ -1,58 +1,147 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+
+import LivePrice from "../components/trade/LivePrice";
+import TradingChart from "../components/trade/TradingChart";
+import TradeToolbar from "../components/trade/TradeToolbar";
+import LiveOrderBook from "../components/trade/LiveOrderBook";
+import RecentTrades from "../components/trade/RecentTrades";
+import BuySellPanel from "../components/trade/BuySellPanel";
+import WalletBox from "../components/trade/WalletBox";
 
 import "../styles/Trade.css";
 
-import tradingPairs from "../data/tradingPairs";
-
-import WalletBox from "../components/trade/WalletBox";
-import TradeHeader from "../components/trade/TradeHeader";
-import TradingChart from "../components/trade/TradingChart";
-import BuySellPanel from "../components/trade/BuySellPanel";
-import OrderBook from "../components/trade/OrderBook";
-import RecentTrades from "../components/trade/RecentTrades";
-import PairModal from "../components/trade/PairModal";
 
 function Trade(){
+console.log("TRADE PAGE LOADED");
+const [searchParams]=useSearchParams();
+const symbolFromUrl=searchParams.get("symbol") || "BTCUSDT";
 
-  const [selectedPair, setSelectedPair] = useState(tradingPairs[0]);
-  const [pairModalOpen, setPairModalOpen] = useState(false);
-  const [walletRefresh, setWalletRefresh] = useState(0);
+const [pair,setPair]=useState(symbolFromUrl);
+const [markets,setMarkets]=useState([]);
+const [search,setSearch]=useState("");
+const [interval,setInterval]=useState("1m");
 
-  return(
 
-    <div className="trade-page">
+useEffect(()=>{
 
-      <TradeHeader
-        pair={selectedPair.symbol}
-        onOpen={() => setPairModalOpen(true)}
-      />
+fetch("https://el-wafaa-backend.onrender.com/api/markets")
+.then(res=>res.json())
+.then(data=>{
+setMarkets(data.markets.map(m=>m.symbol));
+})
+.catch(err=>console.log(err));
 
-      <div className="trade-layout">
+},[]);
 
-        <div className="main-chart">
-          <TradingChart symbol={selectedPair.symbol} />
-        </div>
 
-        <div className="side-panel">
-          <WalletBox userId={1} refresh={walletRefresh} />
-          <OrderBook />
-          <RecentTrades />
-        </div>
+console.log("BINANCE MARKETS:", markets.length);
+const filteredMarkets = markets.filter(item =>
+item.toLowerCase().includes(search.toLowerCase())
+);
 
-      </div>
 
-      <BuySellPanel userId={1} onSuccess={() => setWalletRefresh(walletRefresh+1)} />
+return(
 
-      <PairModal
-        open={pairModalOpen}
-        onClose={() => setPairModalOpen(false)}
-        onSelect={(pair) => setSelectedPair(pair)}
-      />
+<div className="binance-layout">
 
-    </div>
+<header className="top-bar">
 
-  );
+<div>
+<h2>🚀 NEW TRADE PAGE - {pair}</h2>
+<LivePrice symbol={pair}/>
+</div>
+
+<div className="stats">
+<span>24h Change</span>
+<span>High</span>
+<span>Low</span>
+<span>Volume</span>
+</div>
+
+</header>
+
+
+<div className="main-area">
+
+
+<aside className="market-list">
+
+<h3>Markets ({filteredMarkets.length})</h3>
+<p>{markets.length} coins loaded</p>
+
+<input
+placeholder="Search..."
+value={search}
+onChange={(e)=>setSearch(e.target.value)}
+/>
+
+
+{filteredMarkets.slice(0,200).map(item=>(
+
+<div
+className="market-row"
+key={item}
+onClick={()=>setPair(item)}
+>
+{item}
+</div>
+
+))}
+
+
+</aside>
+
+
+
+<section className="center-panel">
+
+<div className="chart-container">
+
+<TradeToolbar interval={interval} setInterval={setInterval} />
+
+<TradingChart symbol={pair} interval={interval}/>
+
+</div>
+
+
+<div className="bottom-trade">
+<BuySellPanel pair={pair} />
+</div>
+
+
+
+
+</section>
+
+
+
+<aside className="right-panel">
+
+<div className="orderbook">
+<LiveOrderBook symbol={pair}/>
+</div>
+
+
+<div className="recent">
+<RecentTrades symbol={pair}/>
+</div>
+
+<div className="wallet">
+<WalletBox/>
+</div>
+
+
+</aside>
+
+
+</div>
+
+</div>
+
+)
 
 }
+
 
 export default Trade;

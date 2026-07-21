@@ -1,70 +1,100 @@
 .markets{
-    padding:25px 15px;
-    color:white;
+    padding:20px 14px 30px;
+    color:#fff;
 }
-
 
 .markets h2{
-    color:white;
+    color:#fff;
     text-align:right;
-    margin-bottom:20px;
+    margin-bottom:16px;
+    font-size:22px;
+    font-weight:700;
 }
-
 
 .search{
     width:100%;
-    padding:15px;
-    border-radius:18px;
-    border:1px solid #303642;
-    background:#11141a;
-    color:white;
+    padding:14px 16px;
+    border-radius:14px;
+    border:1px solid #2b3139;
+    background:#181a20;
+    color:#fff;
     outline:none;
-    margin-bottom:20px;
+    margin-bottom:18px;
     font-size:15px;
 }
-
 
 .market-card{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:linear-gradient(145deg,#151820,#090b0f);
-    border:1px solid #2c323d;
-    border-radius:20px;
-    padding:18px;
+    background:#1e2329;
+    border:1px solid #2b3139;
+    border-radius:16px;
+    padding:16px;
     margin-bottom:12px;
-    transition:.3s;
+    cursor:pointer;
+    transition:all .25s ease;
 }
-
 
 .market-card:hover{
-    transform:translateY(-3px);
-    border-color:#e11d2e;
-    box-shadow:0 0 25px rgba(225,29,46,.18);
+    background:#242a33;
+    border-color:#f0b90b;
+    transform:translateY(-2px);
 }
 
-
-.market-card strong{
-    font-size:20px;
-    color:white;
+.market-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
+.coin-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+}
 
-.market-card p{
+.market-left h4{
     margin:0;
-    font-size:18px;
-    font-weight:bold;
-    color:white;
+    font-size:17px;
+    color:#fff;
+    font-weight:700;
 }
 
+.market-left p{
+    margin:3px 0 8px;
+    color:#8b949e;
+    font-size:13px;
+}
+
+.market-right{
+    text-align:right;
+}
+
+.market-right strong{
+    display:block;
+    font-size:18px;
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.green,
+.red{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:700;
+    min-width:72px;
+    text-align:center;
+}
 
 .green{
-    color:#22c55e;
-    font-weight:bold;
+    background:rgba(14,203,129,.15);
+    color:#0ecb81;
 }
 
-
 .red{
-    color:#ef4444;
-    font-weight:bold;
+    background:rgba(246,70,93,.15);
+    color:#f6465d;
 }

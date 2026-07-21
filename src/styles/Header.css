@@ -1,24 +1,24 @@
 .header{
   position:fixed;
-  top:15px;
-  left:15px;
-  right:15px;
+  top:8px;
+  left:8px;
+  right:8px;
 
-  height:64px;
+  height:54px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
 
-  padding:0 18px;
+  padding:0 12px;
 
   background:rgba(15,18,24,.70);
   backdrop-filter:blur(18px);
 
   border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
+  border-radius:12px;
 
-  z-index:999;
+  z-index:9999;
 
   box-shadow:0 8px 30px rgba(0,0,0,.45);
 }
@@ -113,5 +113,38 @@ background:#e60000;
 color:white;
 border:0;
 border-radius:10px;
+}
+
+
+@media(max-width:600px){
+
+.header{
+  top:8px;
+  left:8px;
+  right:8px;
+  height:52px;
+  padding:0 12px;
+  border-radius:14px;
+}
+
+.logo h2{
+  font-size:16px;
+}
+
+.logo-red{
+  font-size:22px;
+}
+
+.header-right{
+  gap:8px;
+}
+
+.icon-btn{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  font-size:16px;
+}
+
 }
 
